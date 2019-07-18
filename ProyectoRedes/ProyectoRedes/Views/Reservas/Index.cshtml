@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProyectoRedes.Models.Reserva>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipos.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Laboratorio.LaboratorioID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profesor.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDiaLab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadEquipos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equipos.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Laboratorio.LaboratorioID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profesor.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaReserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDiaLab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadEquipos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReservaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReservaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReservaID })
+        </td>
+    </tr>
+}
+
+</table>

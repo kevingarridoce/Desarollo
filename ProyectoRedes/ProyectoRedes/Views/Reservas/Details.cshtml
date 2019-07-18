@@ -1,0 +1,74 @@
+﻿@model ProyectoRedes.Models.Reserva
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipos.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipos.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laboratorio.LaboratorioID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laboratorio.LaboratorioID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profesor.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesor.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaReserva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDiaLab)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDiaLab)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEquipos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEquipos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
